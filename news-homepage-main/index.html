@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="mb-10 bg-white px-5 dark:bg-black">
+    <nav
+      class="m-5 mx-auto flex max-w-7xl items-center justify-between gap-5 sm:mt-8"
+    >
+      <img
+        src="./assets/images/logo.svg"
+        alt="Logo"
+        class="h-8 dark:hidden sm:max-h-16"
+      />
+      <img
+        src="./assets/images/logo-dark.svg"
+        alt="Logo"
+        class="hidden h-8 dark:block sm:max-h-16"
+      />
+      <div
+        id="block-background"
+        class="top-0 bottom-0 left-0 right-0 hidden bg-slate-900 opacity-30 sm:hidden"
+      ></div>
+      <ul
+        class="fixed left-1/3 right-0 top-0 bottom-0 z-10 ml-auto hidden flex-col gap-5 bg-offWhite pt-32 pl-8 text-xl text-paragraph text-veryDarkBlue dark:bg-slate-800 dark:text-offWhite sm:static sm:flex sm:flex-row sm:gap-10 sm:bg-transparent sm:pt-0 dark:sm:bg-transparent"
+        id="navigation"
+        data-active=""
+      >
+        <li
+          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed sm:dark:text-grayishBlue sm:dark:hover:text-softRed"
+        >
+          Home
+        </li>
+        <li
+          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed sm:dark:text-grayishBlue sm:dark:hover:text-softRed"
+        >
+          New
+        </li>
+        <li
+          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed sm:dark:text-grayishBlue sm:dark:hover:text-softRed"
+        >
+          Popular
+        </li>
+        <li
+          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed sm:dark:text-grayishBlue sm:dark:hover:text-softRed"
+        >
+          Trending
+        </li>
+        <li
+          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed sm:dark:text-grayishBlue sm:dark:hover:text-softRed"
+        >
+          Categories
+        </li>
+      </ul>
+
+      <img
+        src="./assets/images/moon.svg"
+        alt="Moon"
+        class="cursor-pointer rounded-full bg-transparent p-1 hover:bg-slate-200 dark:hidden"
+        onclick="handleDarkMode()"
+      />
+      <img
+        src="./assets/images/sun.svg"
+        alt="Sun"
+        class="hidden cursor-pointer rounded-full bg-transparent p-1 hover:bg-slate-800 dark:block"
+        onclick="handleDarkMode()"
+      />
+      <img
+        src="./assets/images/icon-menu.svg"
+        alt="Icon menu"
+        class="cursor-pointer dark:hidden sm:hidden"
+        onclick="handleActiveMenu()"
+      />
+      <img
+        id="menu-close"
+        src="./assets/images/icon-menu-close.svg"
+        alt="Icon menu"
+        class="right-5 z-10 hidden cursor-pointer dark:hidden sm:hidden"
+        onclick="handleActiveMenu()"
+      />
+      <img
+        src="./assets/images/icon-menu-dark.svg"
+        alt="Icon menu"
+        class="hidden cursor-pointer dark:block sm:hidden"
+        onclick="handleActiveMenu()"
+      />
+      <img
+        id="menu-close-dark"
+        src="./assets/images/icon-menu-close-dark.svg"
+        alt="Icon menu"
+        class="right-5 z-10 hidden cursor-pointer dark:hidden sm:hidden"
+        onclick="handleActiveMenu()"
+      />
+    </nav>
+    <main class="mx-auto max-w-[1200px]">
+      <div
+        class="flex flex-col gap-16 sm:grid sm:grid-cols-3 sm:grid-rows-1 sm:gap-x-8"
+      >
+        <div class="col-span-2">
+          <img
+            src="./assets/images/image-web-3-desktop.jpg"
+            alt="Web 3"
+            class="hidden w-full sm:block"
+          />
+          <img
+            src="./assets/images/image-web-3-mobile.jpg"
+            alt="Web 3"
+            class="block w-full sm:hidden"
+          />
+          <div
+            class="mt-8 flex flex-col justify-between gap-5 sm:flex-row sm:gap-20"
+          >
+            <h1
+              class="w-[13ch] text-4xl font-bold dark:text-offWhite sm:w-[10ch] sm:text-5xl"
+            >
+              The Bright Future of Web 3.0?
+            </h1>
+            <div
+              class="flex flex-col pr-0 text-darkGrayishBlue dark:text-grayishBlue sm:w-[40ch] sm:pr-5"
+            >
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <a
+                href="#"
+                aria-label="Read more"
+                class="mt-10 w-fit bg-softRed px-10 py-4 text-sm uppercase tracking-[.3em] text-offWhite hover:bg-veryDarkBlue dark:hover:bg-slate-800"
+                >Read more</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-between gap-10 bg-veryDarkBlue p-7 text-grayishBlue"
+        >
+          <h1 class="text-3xl font-bold text-softOrange">New</h1>
+          <div>
+            <h3
+              class="cursor-pointer text-lg font-bold text-offWhite hover:text-softOrange"
+            >
+              Hydrogen VS Electric Cars
+            </h3>
+            <p class="font-normal">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </div>
+          <div class="h-[1px] w-full bg-darkGrayishBlue"></div>
+          <div>
+            <h3
+              class="cursor-pointer text-lg font-bold text-offWhite hover:text-softOrange"
+            >
+              The Downsides of AI Artistry
+            </h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="h-[1px] w-full bg-darkGrayishBlue"></div>
+          <div>
+            <h3
+              class="cursor-pointer text-lg font-bold text-offWhite hover:text-softOrange"
+            >
+              Is VC Funding Drying Up?
+            </h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-20 flex flex-col gap-10 text-darkGrayishBlue dark:text-grayishBlue sm:flex-row"
+      >
+        <div class="flex h-[10em] gap-10">
+          <img
+            src="./assets/images/image-retro-pcs.jpg"
+            alt=""
+            class="h-full"
+          />
+          <div class="max-w-sm">
+            <div
+              aria-label="first news"
+              class="dark:text-darkGraccent-darkGrayishBlue text-4xl font-bold text-grayishBlue"
+            >
+              01
+            </div>
+            <h3
+              class="mt-2 mb-2 cursor-pointer font-bold text-veryDarkBlue hover:text-softRed dark:text-offWhite dark:hover:text-softRed sm:text-lg"
+            >
+              Reviving Retro PCs
+            </h3>
+            <p class="sm:text-md text-sm">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </div>
+        <div class="flex h-[10em] gap-10">
+          <img
+            src="./assets/images/image-top-laptops.jpg"
+            alt=""
+            class="h-full"
+          />
+          <div class="max-w-sm">
+            <div
+              aria-label="second news"
+              class="dark:text-darkGraccent-darkGrayishBlue text-4xl font-bold text-grayishBlue"
+            >
+              02
+            </div>
+            <h3
+              class="mt-2 mb-2 cursor-pointer font-bold text-veryDarkBlue hover:text-softRed dark:text-offWhite dark:hover:text-softRed sm:text-lg"
+            >
+              Top 10 Laptops of 2020
+            </h3>
+            <p class="sm:text-md text-sm">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </div>
+        <div class="flex h-[10em] gap-10">
+          <img
+            src="./assets/images/image-gaming-growth.jpg"
+            alt=""
+            class="h-full"
+          />
+          <div class="max-w-sm">
+            <div
+              aria-label="third news"
+              class="dark:text-darkGraccent-darkGrayishBlue text-4xl font-bold text-grayishBlue"
+            >
+              03
+            </div>
+            <h3
+              class="mt-2 mb-2 cursor-pointer font-bold text-veryDarkBlue hover:text-softRed dark:text-offWhite dark:hover:text-softRed sm:text-lg"
+            >
+              The Growth of Gaming
+            </h3>
+            <p class="sm:text-md text-sm">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const handleDarkMode = () => {
+        document.querySelector("html").classList.toggle("dark");
+      };
+
+      const handleActiveMenu = () => {
+        const navigationEl = document.getElementById("navigation");
+        const menuCloseEl = document.getElementById("menu-close");
+        const menuCloseDarkEl = document.getElementById("menu-close-dark");
+        const blockBackgroundEl = document.getElementById("block-background");
+        const menuActiveAttri =
+          navigationEl.attributes.getNamedItem("data-active");
+
+        if (!menuActiveAttri.value) {
+          menuActiveAttri.value = "active";
+          navigationEl.classList.replace("hidden", "flex");
+          menuCloseEl.classList.replace("hidden", "fixed");
+          menuCloseDarkEl.classList.replace("hidden", "fixed");
+          menuCloseDarkEl.classList.replace("dark:hidden", "dark:fixed");
+          blockBackgroundEl.classList.replace("hidden", "fixed");
+        } else {
+          menuActiveAttri.value = "";
+          navigationEl.classList.replace("flex", "hidden");
+          menuCloseEl.classList.replace("fixed", "hidden");
+          menuCloseDarkEl.classList.replace("fixed", "hidden");
+          menuCloseDarkEl.classList.replace("dark:fixed", "dark:hidden");
+          blockBackgroundEl.classList.replace("fixed", "hidden");
+        }
+      };
+    </script>
+  </body>
+</html>
