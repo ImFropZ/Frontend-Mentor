@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Link](https://github.com/ImFropZ/Frontend-Mentor/tree/main/product-preview-card-component-main)
-- Live Site URL: [Link](https://frontend-mentor-fropz.vercel.app/product-preview-card)
+- Live Site URL: [Link](https://frontend-mentor-fropz.vercel.app/product-preview-card-component-main)
 
 ## My process
 
