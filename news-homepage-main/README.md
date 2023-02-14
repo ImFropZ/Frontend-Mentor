@@ -42,8 +42,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: ~~[Link](#)~~
-- Live Site URL: ~~[Link](#)~~
+- Solution URL: [Link](https://github.com/ImFropZ/Frontend-Mentor/tree/main/news-homepage-main)
+- Live Site URL: [Link](https://frontend-mentor-fropz.vercel.app/news-homepage-main)
 
 ## My process
 
@@ -107,4 +107,3 @@ I am really interested in design and I can see myself in the future use grid mor
 
 - Website - [Lim Tangmeng](https://www.limtangmeng.vercel.com)
 - Frontend Mentor - [@Lim Tangmeng](https://www.frontendmentor.io/profile/ImFropZ)
-

@@ -975,6 +975,10 @@ video {
     color: hsl(5 85% 63% / var(--tw-text-opacity));
   }
 
+  .dark .dark\:sm\:hidden {
+    display: none;
+  }
+
   .dark .dark\:sm\:bg-transparent {
     background-color: transparent;
   }
