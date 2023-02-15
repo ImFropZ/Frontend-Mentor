@@ -9,70 +9,100 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/news-homepage-main/assets/images/favicon-32x32.png"
+      href="/news-homepage-main-dark/assets/images/favicon-32x32.png"
     />
 
     <title>Frontend Mentor | News homepage</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <link href="/news-homepage-main/dist/output.css" rel="stylesheet" />
+    <link href="/news-homepage-main-dark/dist/output.css" rel="stylesheet" />
   </head>
-  <body class="mb-10 bg-white px-5">
+  <body class="mb-10 bg-white px-5 dark:bg-black">
     <nav
       class="m-5 mx-auto flex max-w-7xl items-center justify-between gap-5 sm:mt-8"
     >
       <img
-        src="/news-homepage-main/assets/images/logo.svg"
+        src="/news-homepage-main-dark/assets/images/logo.svg"
         alt="Logo"
-        class="h-8 sm:max-h-16"
+        class="h-8 dark:hidden sm:max-h-16"
+      />
+      <img
+        src="/news-homepage-main-dark/assets/images/logo-dark.svg"
+        alt="Logo"
+        class="hidden h-8 dark:block sm:max-h-16"
       />
       <div
         id="block-background"
         class="top-0 bottom-0 left-0 right-0 hidden bg-slate-900 opacity-30 sm:hidden"
       ></div>
       <ul
-        class="fixed left-1/3 right-0 top-0 bottom-0 z-10 ml-auto hidden flex-col gap-5 bg-offWhite pt-32 pl-8 text-xl text-paragraph text-veryDarkBlue sm:static sm:flex sm:flex-row sm:gap-10 sm:bg-transparent sm:pt-0"
+        class="fixed left-1/3 right-0 top-0 bottom-0 z-10 ml-auto hidden flex-col gap-5 bg-offWhite pt-32 pl-8 text-xl text-paragraph text-veryDarkBlue dark:bg-slate-800 dark:text-offWhite sm:static sm:flex sm:flex-row sm:gap-10 sm:bg-transparent sm:pt-0 dark:sm:bg-transparent"
         id="navigation"
         data-active=""
       >
         <li
-          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed"
+          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed sm:dark:text-grayishBlue sm:dark:hover:text-softRed"
         >
           Home
         </li>
         <li
-          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed"
+          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed sm:dark:text-grayishBlue sm:dark:hover:text-softRed"
         >
           New
         </li>
         <li
-          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed"
+          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed sm:dark:text-grayishBlue sm:dark:hover:text-softRed"
         >
           Popular
         </li>
         <li
-          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed"
+          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed sm:dark:text-grayishBlue sm:dark:hover:text-softRed"
         >
           Trending
         </li>
         <li
-          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed"
+          class="cursor-pointer hover:text-softRed sm:text-darkGrayishBlue sm:hover:text-softRed sm:dark:text-grayishBlue sm:dark:hover:text-softRed"
         >
           Categories
         </li>
       </ul>
 
       <img
-        src="/news-homepage-main/assets/images/icon-menu.svg"
+        src="/news-homepage-main-dark/assets/images/moon.svg"
+        alt="Moon"
+        class="cursor-pointer rounded-full bg-transparent p-1 hover:bg-slate-200 dark:hidden"
+        onclick="handleDarkMode()"
+      />
+      <img
+        src="/news-homepage-main-dark/assets/images/sun.svg"
+        alt="Sun"
+        class="hidden cursor-pointer rounded-full bg-transparent p-1 hover:bg-slate-800 dark:block"
+        onclick="handleDarkMode()"
+      />
+      <img
+        src="/news-homepage-main-dark/assets/images/icon-menu.svg"
         alt="Icon menu"
-        class="cursor-pointer sm:hidden"
+        class="cursor-pointer dark:hidden sm:hidden"
         onclick="handleActiveMenu()"
       />
       <img
         id="menu-close"
-        src="/news-homepage-main/assets/images/icon-menu-close.svg"
+        src="/news-homepage-main-dark/assets/images/icon-menu-close.svg"
         alt="Icon menu"
-        class="right-5 z-10 hidden cursor-pointer sm:hidden"
+        class="right-5 z-10 hidden cursor-pointer dark:hidden sm:hidden"
+        onclick="handleActiveMenu()"
+      />
+      <img
+        src="/news-homepage-main-dark/assets/images/icon-menu-dark.svg"
+        alt="Icon menu"
+        class="hidden cursor-pointer dark:block sm:hidden dark:sm:hidden"
+        onclick="handleActiveMenu()"
+      />
+      <img
+        id="menu-close-dark"
+        src="/news-homepage-main-dark/assets/images/icon-menu-close-dark.svg"
+        alt="Icon menu"
+        class="right-5 z-10 hidden cursor-pointer dark:hidden sm:hidden dark:sm:hidden"
         onclick="handleActiveMenu()"
       />
     </nav>
@@ -84,21 +114,23 @@
           <picture class="w-full">
             <source
               media="(max-width: 375px)"
-              srcset="/news-homepage-main/assets/images/image-web-3-mobile.jpg"
+              srcset="/news-homepage-main-dark/assets/images/image-web-3-mobile.jpg"
             />
             <img
-              src="/news-homepage-main/assets/images/image-web-3-desktop.jpg"
+              src="/news-homepage-main-dark/assets/images/image-web-3-desktop.jpg"
               alt="Web 3"
             />
           </picture>
           <div
             class="mt-8 flex flex-col justify-between gap-5 sm:flex-row sm:gap-20"
           >
-            <h1 class="w-[13ch] text-4xl font-bold sm:w-[10ch] sm:text-5xl">
+            <h1
+              class="w-[13ch] text-4xl font-bold dark:text-offWhite sm:w-[10ch] sm:text-5xl"
+            >
               The Bright Future of Web 3.0?
             </h1>
             <div
-              class="flex flex-col pr-0 text-darkGrayishBlue sm:w-[40ch] sm:pr-5"
+              class="flex flex-col pr-0 text-darkGrayishBlue dark:text-grayishBlue sm:w-[40ch] sm:pr-5"
             >
               <p>
                 We dive into the next evolution of the web that claims to put
@@ -108,7 +140,7 @@
               <a
                 href="#"
                 aria-label="Read more"
-                class="mt-10 w-fit bg-softRed px-10 py-4 text-sm uppercase tracking-[.3em] text-offWhite hover:bg-veryDarkBlue"
+                class="mt-10 w-fit bg-softRed px-10 py-4 text-sm uppercase tracking-[.3em] text-offWhite hover:bg-veryDarkBlue dark:hover:bg-slate-800"
                 >Read more</a
               >
             </div>
@@ -154,22 +186,24 @@
           </div>
         </div>
       </div>
-      <div class="mt-20 flex flex-col gap-10 text-darkGrayishBlue sm:flex-row">
+      <div
+        class="mt-20 flex flex-col gap-10 text-darkGrayishBlue dark:text-grayishBlue sm:flex-row"
+      >
         <div class="flex h-[10em] gap-10">
           <img
-            src="/news-homepage-main/assets/images/image-retro-pcs.jpg"
+            src="/news-homepage-main-dark/assets/images/image-retro-pcs.jpg"
             alt="Retro PCs"
             class="h-full"
           />
           <div class="max-w-sm">
             <div
               aria-label="first news"
-              class="text-4xl font-bold text-grayishBlue"
+              class="dark:text-darkGraccent-darkGrayishBlue text-4xl font-bold text-grayishBlue"
             >
               01
             </div>
             <h3
-              class="mt-2 mb-2 cursor-pointer font-bold text-veryDarkBlue hover:text-softRed sm:text-lg"
+              class="mt-2 mb-2 cursor-pointer font-bold text-veryDarkBlue hover:text-softRed dark:text-offWhite dark:hover:text-softRed sm:text-lg"
             >
               Reviving Retro PCs
             </h3>
@@ -180,19 +214,19 @@
         </div>
         <div class="flex h-[10em] gap-10">
           <img
-            src="/news-homepage-main/assets/images/image-top-laptops.jpg"
+            src="/news-homepage-main-dark/assets/images/image-top-laptops.jpg"
             alt="Top laptops"
             class="h-full"
           />
           <div class="max-w-sm">
             <div
               aria-label="second news"
-              class="text-4xl font-bold text-grayishBlue"
+              class="dark:text-darkGraccent-darkGrayishBlue text-4xl font-bold text-grayishBlue"
             >
               02
             </div>
             <h3
-              class="mt-2 mb-2 cursor-pointer font-bold text-veryDarkBlue hover:text-softRed sm:text-lg"
+              class="mt-2 mb-2 cursor-pointer font-bold text-veryDarkBlue hover:text-softRed dark:text-offWhite dark:hover:text-softRed sm:text-lg"
             >
               Top 10 Laptops of 2020
             </h3>
@@ -203,19 +237,19 @@
         </div>
         <div class="flex h-[10em] gap-10">
           <img
-            src="/news-homepage-main/assets/images/image-gaming-growth.jpg"
+            src="/news-homepage-main-dark/assets/images/image-gaming-growth.jpg"
             alt="Gaming growth"
             class="h-full"
           />
           <div class="max-w-sm">
             <div
               aria-label="third news"
-              class="text-4xl font-bold text-grayishBlue"
+              class="dark:text-darkGraccent-darkGrayishBlue text-4xl font-bold text-grayishBlue"
             >
               03
             </div>
             <h3
-              class="mt-2 mb-2 cursor-pointer font-bold text-veryDarkBlue hover:text-softRed sm:text-lg"
+              class="mt-2 mb-2 cursor-pointer font-bold text-veryDarkBlue hover:text-softRed dark:text-offWhite dark:hover:text-softRed sm:text-lg"
             >
               The Growth of Gaming
             </h3>
@@ -227,9 +261,14 @@
       </div>
     </main>
     <script>
+      const handleDarkMode = () => {
+        document.querySelector("html").classList.toggle("dark");
+      };
+
       const handleActiveMenu = () => {
         const navigationEl = document.getElementById("navigation");
         const menuCloseEl = document.getElementById("menu-close");
+        const menuCloseDarkEl = document.getElementById("menu-close-dark");
         const blockBackgroundEl = document.getElementById("block-background");
         const menuActiveAttri =
           navigationEl.attributes.getNamedItem("data-active");
@@ -238,11 +277,15 @@
           menuActiveAttri.value = "active";
           navigationEl.classList.replace("hidden", "flex");
           menuCloseEl.classList.replace("hidden", "fixed");
+          menuCloseDarkEl.classList.replace("hidden", "fixed");
+          menuCloseDarkEl.classList.replace("dark:hidden", "dark:fixed");
           blockBackgroundEl.classList.replace("hidden", "fixed");
         } else {
           menuActiveAttri.value = "";
           navigationEl.classList.replace("flex", "hidden");
           menuCloseEl.classList.replace("fixed", "hidden");
+          menuCloseDarkEl.classList.replace("fixed", "hidden");
+          menuCloseDarkEl.classList.replace("dark:fixed", "dark:hidden");
           blockBackgroundEl.classList.replace("fixed", "hidden");
         }
       };

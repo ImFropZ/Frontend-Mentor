@@ -26,13 +26,14 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-**Noted: You can change width of the mobile version in the config file.**
+**Noted: In this Project I add DarkMode into it to improve my Tailwindcss skills with config file. You can change width of the mobile version in the config file.**
 
 ### Screenshot
 
 - Desktop Version:
 
   ![News Desktop](./output/news_challenge.png)
+  ![News Desktop Dark Mode](./output/news_challenge_dark.png)
 
 - Mobile Version:
 
@@ -41,8 +42,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link](https://github.com/ImFropZ/Frontend-Mentor/tree/main/news-homepage-main)
-- Live Site URL: [Link](https://frontend-mentor-fropz.vercel.app/news-homepage-main)
+- Solution URL: [Link](https://github.com/ImFropZ/Frontend-Mentor/tree/main/news-homepage-main-dark)
+- Live Site URL: [Link](https://frontend-mentor-fropz.vercel.app/news-homepage-main-dark)
 
 ## My process
 
@@ -81,12 +82,16 @@ From:
 To:
 
 ```html
-<picture class="w-full">
+<picture>
   <source
-    media="(max-width:375px)"
-    srcset="./assets/images/image-web-3-mobile.jpg"
+    media="(min-width:375px)"
+    srcset="./assets/images/image-web-3-desktop.jpg"
   />
-  <img src="./assets/images/image-web-3-desktop.jpg" alt="Web 3" />
+  <img
+    src="./assets/images/image-web-3-mobile.jpg"
+    alt="Web 3"
+    class="block w-full"
+  />
 </picture>
 ```
 
