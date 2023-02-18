@@ -13,6 +13,7 @@ html {
 a {
   text-transform: capitalize;
   font-size: 21px;
+  color: black;
 }
 a:is(:focus, :visited, :active) {
   color: black;
