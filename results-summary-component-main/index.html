@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="/results-summary-component-main/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <h1 class="header__title">Your Result</h1>
+        <div class="header__circle">
+          <div>
+            <h2 class="header__score">76</h2>
+            <p class="header__fullscore">of 100</p>
+          </div>
+        </div>
+        <h2 class="header__status">Great</h2>
+        <p class="header__description">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="context">
+        <h1 class="context__title">Summary</h1>
+
+        <div class="context--flex">
+          <div class="context__container context__container--red">
+            <img
+              src="/results-summary-component-main/assets/images/icon-reaction.svg"
+              alt=""
+            />
+            <h3 class="context__name context__name--red">Reaction</h3>
+            <span class="context__score"
+              ><span class="context__score--black">80</span> / 100</span
+            >
+          </div>
+          <div class="context__container context__container--yellow">
+            <img
+              src="/results-summary-component-main/assets/images/icon-memory.svg"
+              alt=""
+            />
+            <h3 class="context__name context__name--yellow">Memory</h3>
+            <span class="context__score"
+              ><span class="context__score--black">92</span> / 100</span
+            >
+          </div>
+          <div class="context__container context__container--green">
+            <img
+              src="/results-summary-component-main/assets/images/icon-verbal.svg"
+              alt=""
+            />
+            <h3 class="context__name context__name--green">Verbal</h3>
+            <span class="context__score"
+              ><span class="context__score--black">61</span> / 100</span
+            >
+          </div>
+          <div class="context__container context__container--blue">
+            <img
+              src="/results-summary-component-main/assets/images/icon-visual.svg"
+              alt=""
+            />
+            <h3 class="context__name context__name--blue">Visual</h3>
+            <span class="context__score"
+              ><span class="context__score--black">72</span> / 100</span
+            >
+          </div>
+          <button
+            class="context__btn context__btn--continue context__btn--hover"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
